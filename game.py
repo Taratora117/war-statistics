@@ -58,10 +58,12 @@ class Game:
         war = True
         continue
 
+      # record
+      self.record(humanDeck, aiDeck)
 
       # reset
       cards["human"] = None
       cards["ai"] = None
       cards["pot"] = []
 
-    return len(humanDeck) == 0
+    return self.gameHistory
